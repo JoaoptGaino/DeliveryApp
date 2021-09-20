@@ -1,0 +1,11 @@
+version : '3'
+services:
+  pizzaria-db:
+    container_name: pizzaria-db
+    image: postgres:10.6-alpine
+    environment: 
+      - 'POSTGRES_DB=pizzaria_delivery'
+      - 'POSTGRES_USER=root'
+      - 'POSTGRES_PASSWORD=root'
+    ports:
+      - '5432:5432'
